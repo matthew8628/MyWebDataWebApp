@@ -1,36 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Text.Json;
+using WebApi.Models;
+using System.Collections.Generic;
+using Services;
 
 
-
-
-
-namespace WebApi.Controllers
+namespace WebApi.Controllers;
+[ApiController]
+[Route("[controller]")]
+public class FirstAPIController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class FirstAPIController : ControllerBase
+    private readonly UserService _userService;
+
+    public FirstAPIController(UserService userService)
     {
-        private readonly HttpClient _httpClient;
+        _userService = userService;
+    }
 
-        public FirstAPIController(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
-
-        [HttpGet(Name = "GetData")]
-        public async Task<IActionResult> GetData()
-        {
-            var response = await _httpClient.GetAsync("https://dummyjson.com/docs/users");
-
-            if (!response.IsSuccessStatusCode)
-            {
-                return StatusCode((int)response.StatusCode, "Failed to fetch data.");
-            }
-
-            var data = await response.Content.ReadAsStringAsync();
-            return Content(data, "application/json");
-        }
+    [HttpGet(Name = "GetData")]
+    public async Task<IActionResult> GetData()
+    {
+        var users = await _userService.GetUsersAsync();
+        return Ok(users);
     }
 }
+

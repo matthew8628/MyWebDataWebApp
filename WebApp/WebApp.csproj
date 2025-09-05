@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\WebApi\WebApi.csproj"/>
+	</ItemGroup>	
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Services\Services.csproj"/>
+	</ItemGroup>
+
 </Project>

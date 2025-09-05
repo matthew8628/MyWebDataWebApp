@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "x0mgedA9wrs=",
+  "dgSpecHash": "iIRgUttx2xk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Laptop\\source\\repos\\MyWebDataWebApp\\WebApp\\WebApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Laptop\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\Laptop\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
   "logs": []
 }

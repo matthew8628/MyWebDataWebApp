@@ -1,4 +1,66 @@
 ﻿@page
-@model WebApp.Pages.DisplayDataModel
+@model UsersPageModel
 @{
+    ViewData["Title"] = "Display User Data";
+}
+
+
+<h1>Users</h1>
+
+@foreach (var user in Model.Users)
+{
+<div class="user-box">
+    <br />
+    <label>ID:</label>
+    <input type="text" value="@user.Id" readonly /><br />
+
+    <label>FirstName:</label>
+    <input type="text" value="@user.FirstName" readonly /><br />
+
+    <label>LastName:</label>
+    <input type="text" value="@user.LastName" readonly /><br />
+
+    <label>MaidenName:</label>
+    <input type="text" value="@user.MaidenName" readonly /><br />
+
+    <label>Age:</label>
+    <input type="text" value="@user.Age" readonly /><br />
+
+    <label>Gender:</label>
+    <input type="text" value="@user.Gender" readonly /><br />
+
+    <label>Email:</label>
+    <input type="text" value="@user.Email" readonly /><br />
+
+    <label>Username:</label>
+    <input type="text" value="@user.Username" readonly /><br />
+
+    <label>Password:</label>
+    <input type="text" value="@user.Password" readonly /><br />
+
+    <label>Image:</label>
+    <br />
+    <img src="@user.Image" alt="@user.Id Image" width="500" height="600">
+
+
+    <br />
+
+    <label>BloodGroup:</label>
+    <input type="text" value="@user.BloodGroup" readonly /><br />
+
+    <label>Height:</label>
+    <input type="text" value="@user.Height" readonly /><br />
+
+    <label>Weight:</label>
+    <input type="text" value="@user.Weight" readonly /><br />
+
+
+    <label>EyeColor:</label>
+    <input type="text" value="@user.EyeColor" readonly /><br />
+
+    <label>Hair:</label>
+    <input type="text" value="@user.Hair" readonly /><br />
+
+    <br />
+</div>
 }
