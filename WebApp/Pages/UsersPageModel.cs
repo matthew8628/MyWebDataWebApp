@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using WebApi.Models;
 
-public class UsersPageModel : PageModel
+public class UsersPageModel : PageModel // inherits from PageModel
 {
     private readonly UserService _userService;
 

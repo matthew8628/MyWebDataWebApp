@@ -14,15 +14,15 @@ public class FirstAPIController : ControllerBase
 {
     private readonly UserService _userService;
 
-    public FirstAPIController(UserService userService)
+    public FirstAPIController(UserService userService) // Constructor injection of UserService
     {
-        _userService = userService;
+        _userService = userService; // Assign the injected service to a private field
     }
 
-    [HttpGet(Name = "GetData")]
+    [HttpGet(Name = "GetData")] 
     public async Task<IActionResult> GetData()
     {
-        var users = await _userService.GetUsersAsync();
+        var users = await _userService.GetUsersAsync(); // Call the method to get users
         return Ok(users);
     }
 }

@@ -6,12 +6,12 @@ public class UserService
 {
     private readonly HttpClient _httpClient;
 
-    public UserService(HttpClient httpClient)
+    public UserService(HttpClient httpClient) // Constructor that takes an HttpClient as a parameter
     {
         _httpClient = httpClient;
     }
 
-    public async Task<List<User>> GetUsersAsync()
+    public async Task<List<User>> GetUsersAsync() // Method to fetch users
     {
         var response = await _httpClient.GetAsync("https://dummyjson.com/users"); // Gets the data from the API through set up http client
         response.EnsureSuccessStatusCode();

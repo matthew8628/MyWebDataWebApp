@@ -1,12 +1,12 @@
 using WebApi.Controllers;
 using Services;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args); 
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+// Add services to the container (builder).
+builder.Services.AddRazorPages(); // Enables razor pages
 builder.Services.AddControllers();
-builder.Services.AddHttpClient<UserService>();
+builder.Services.AddHttpClient<UserService>(); // Register UserService with HttpClient
 
 var app = builder.Build();
 
@@ -18,19 +18,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-// FirstAPIController myController = new FirstAPIController();
-// Console.WriteLine(myController.GetData().Wait());
-
-
 app.UseHttpsRedirection();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapStaticAssets();
-app.MapRazorPages()
+app.MapRazorPages() 
    .WithStaticAssets();
 app.MapControllers();
+
 
 app.Run();

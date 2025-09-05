@@ -29,3 +29,10 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.test-header {
+  font-size: 12rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--bs-secondary-color);
+}

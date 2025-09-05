@@ -2,12 +2,8 @@ using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddHttpClient<UserService>();
 builder.Services.AddHttpClient();
-
-
-// Add services
 builder.Services.AddControllers();     // Enables API controllers
 builder.Services.AddCors(options =>
 {
