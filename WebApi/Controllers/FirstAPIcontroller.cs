@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// xposes that user data from api via an endpoint.
+using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
-using WebApi.Models;
+using Models;
 using System.Collections.Generic;
 using Services;
 

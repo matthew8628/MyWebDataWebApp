@@ -12,6 +12,11 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
+    public IActionResult OnPostLoadUsers()
+    {
+        return RedirectToPage("/DisplayData");
+    }
+
     public void OnGet()
     {
         _logger.LogInformation("Index page loaded via GET request.");

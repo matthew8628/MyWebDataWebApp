@@ -1,8 +1,21 @@
+using Microsoft.EntityFrameworkCore;
 using Services;
+using DataAccess;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddHttpClient<UserService>();
+
+builder.Services.AddDbContext<WebAppContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WebAppContext")));
+
+builder.Services.AddScoped<UserService>(); // Register UserService
+
+builder.Services.AddControllers();
+
+
+
+
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();     // Enables API controllers
 builder.Services.AddCors(options =>

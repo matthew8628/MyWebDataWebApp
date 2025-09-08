@@ -1,0 +1,10 @@
+﻿.user-box {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.user-box img {
+    width: 300px;
+    height: 300px;
+}

@@ -1,8 +1,14 @@
 ﻿@page  //Makes the file into MVC action. must have .cshtml file extension
-@model UsersPageModel
+@model DisplayDataModel
 @{
     ViewData["Title"] = "Display User Data";
 }
+
+
+
+<form method="post">
+    <button type="submit" class="btn btn-primary" formaction="?handler=TestFunc">Load Users</button>
+</form>
 
 
 <h1>Users</h1>
@@ -58,8 +64,6 @@
     <label>EyeColor:</label>
     <input type="text" value="@user.EyeColor" readonly /><br />
 
-    <label>Hair:</label>
-    <input type="text" value="@user.Hair" readonly /><br />
 
     <br />
 </div>

@@ -1,18 +1,28 @@
-﻿namespace Services;
-using WebApi.Models;
+﻿// calls an external API to get user data.
+namespace Services;
+using DataAccess;
+using Microsoft.EntityFrameworkCore;
+using Models;
+using System.Net.Http;
 using System.Text.Json;
 
-public class UserService
+public class UserService : IUserService
 {
-    private readonly HttpClient _httpClient;
+    private readonly WebAppContext _context;
 
-    public UserService(HttpClient httpClient) // Constructor that takes an HttpClient as a parameter
+    public UserService(WebAppContext context) // Constructor that takes an HttpClient as a parameter
     {
-        _httpClient = httpClient;
+        _context = context;
     }
 
     public async Task<List<User>> GetUsersAsync() // Method to fetch users
     {
+        return await _context.User.ToListAsync();
+
+
+
+        /* Legacy code to fetch from external API
+         * 
         var response = await _httpClient.GetAsync("https://dummyjson.com/users"); // Gets the data from the API through set up http client
         response.EnsureSuccessStatusCode();
 
@@ -20,5 +30,6 @@ public class UserService
         var usersResponse = JsonSerializer.Deserialize<UsersResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }); // Deserializes the JSON string into a UsersResponse object
 
         return usersResponse?.Users ?? new List<User>(); //return list of users or empty if null
+        */
     }
 }
