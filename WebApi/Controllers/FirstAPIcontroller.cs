@@ -13,9 +13,9 @@ namespace WebApi.Controllers;
 [Route("[controller]")]
 public class FirstAPIController : ControllerBase
 {
-    private readonly UserService _userService;
+    private readonly IUserService _userService;
 
-    public FirstAPIController(UserService userService) // Constructor injection of UserService
+    public FirstAPIController(IUserService userService) // Constructor injection of UserService
     {
         _userService = userService; // Assign the injected service to a private field
     }

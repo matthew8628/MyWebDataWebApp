@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    internal interface IUserService
+    public interface IUserService
     {
         Task<List<Models.User>> GetUsersAsync();
     }

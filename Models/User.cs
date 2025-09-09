@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
     public class Hair
     {
+        public int Id { get; set; }
         public string? Color { get; set; }
         public string? Type { get; set; }
     }
@@ -12,7 +15,9 @@ namespace Models
 
     public class User
     {
-        public int? Id { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? MaidenName { get; set; }

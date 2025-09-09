@@ -4,32 +4,41 @@ using DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text.Json;
 
 public class UserService : IUserService
 {
-    private readonly WebAppContext _context;
+    private readonly IUserRepository _userRepository;
+    private readonly HttpClient _httpClient; // HttpClient to make HTTP requests
 
-    public UserService(WebAppContext context) // Constructor that takes an HttpClient as a parameter
+    public UserService(IUserRepository repository, HttpClient httpClient) // Constructor that takes an HttpClient as a parameter
     {
-        _context = context;
+        _userRepository = repository;
+        _httpClient = httpClient;
     }
 
     public async Task<List<User>> GetUsersAsync() // Method to fetch users
     {
-        return await _context.User.ToListAsync();
+        
+        // var response = await _httpClient.GetAsync("https://dummyjson.com/users"); Gets the data from the API through set up http client
+        var response = await _httpClient.GetFromJsonAsync<UsersResponse>("https://dummyjson.com/users");
+
+        if (response?.Users != null)
+        {
+            foreach(var user in response.Users)
+            {
+                var existingUser = await _userRepository.GetUserByIdAsync(user.Id);
+                if(existingUser == null)
+                {
+                    await _userRepository.AddUserAsync(user);
+                }
+            }
 
 
+            return response.Users;
+        }
 
-        /* Legacy code to fetch from external API
-         * 
-        var response = await _httpClient.GetAsync("https://dummyjson.com/users"); // Gets the data from the API through set up http client
-        response.EnsureSuccessStatusCode();
-
-        var json = await response.Content.ReadAsStringAsync(); // Reads the response content as a string
-        var usersResponse = JsonSerializer.Deserialize<UsersResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }); // Deserializes the JSON string into a UsersResponse object
-
-        return usersResponse?.Users ?? new List<User>(); //return list of users or empty if null
-        */
+        return await _userRepository.GetUsersAsync();
     }
 }

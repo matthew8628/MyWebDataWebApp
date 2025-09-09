@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
         Task<List<User>> GetUsersAsync();
         Task<User?> GetUserByIdAsync(int id);

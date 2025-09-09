@@ -12,9 +12,9 @@ namespace WebApp.Pages
         private readonly ILogger<DisplayDataModel>? _logger;
 
 
-        private readonly UserService _userService; 
+        private readonly IUserService _userService; 
 
-        public DisplayDataModel(UserService userService)
+        public DisplayDataModel(IUserService userService)
         {
             _userService = userService; 
         }

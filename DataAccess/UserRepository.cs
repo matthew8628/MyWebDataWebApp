@@ -19,30 +19,31 @@ namespace DataAccess
 
         public async Task<List<User>> GetUsersAsync()
         {
-            return await _context.User.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
         public async Task<User?> GetUserByIdAsync(int id)
         {
-            return await _context.User.FindAsync(id);
+            return await _context.Users.FindAsync(id);
         }
         public async Task AddUserAsync(User user)
         {
-            _context.User.Add(user);
+            user.Id = 0;
+            _context.Users.Add(user);
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateUserAsync(User user)
         {
-            _context.User.Update(user);
+            _context.Users.Update(user);
             await _context.SaveChangesAsync();
         }
         public async Task DeleteUserAsync(int id)
         {
-            var user = await _context.User.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
             if (user != null)
             {
-                _context.User.Remove(user);
+                _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
             }
         }

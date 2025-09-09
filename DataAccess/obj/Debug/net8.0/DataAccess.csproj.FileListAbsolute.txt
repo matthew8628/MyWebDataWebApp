@@ -14,3 +14,5 @@ C:\Users\Laptop\source\repos\MyWebDataWebApp\DataAccess\obj\Debug\net8.0\DataAcc
 C:\Users\Laptop\source\repos\MyWebDataWebApp\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
 C:\Users\Laptop\source\repos\MyWebDataWebApp\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 C:\Users\Laptop\source\repos\MyWebDataWebApp\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\Users\Laptop\source\repos\MyWebDataWebApp\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Users\Laptop\source\repos\MyWebDataWebApp\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache

@@ -14,6 +14,9 @@ builder.Services.AddDbContext<WebAppContext>(options =>
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddHttpClient<IUserService, UserService>();
+
+
 
 
 builder.Services.AddControllers();
@@ -34,9 +37,13 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();  // Redirect HTTP to HTTPS
 app.UseRouting();
 app.UseAuthorization();
-app.MapStaticAssets();
-app.MapRazorPages() 
-   .WithStaticAssets();
+
+
+app.UseStaticFiles();
+
+
+
+app.MapRazorPages();
 app.MapControllers();
 
 app.Run();
