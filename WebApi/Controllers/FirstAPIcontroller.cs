@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// Exposes that user data from api via an endpoint.
+using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
-using WebApi.Models;
+using Models;
 using System.Collections.Generic;
 using Services;
 
@@ -12,9 +13,9 @@ namespace WebApi.Controllers;
 [Route("[controller]")]
 public class FirstAPIController : ControllerBase
 {
-    private readonly UserService _userService;
+    private readonly IUserService _userService;
 
-    public FirstAPIController(UserService userService) // Constructor injection of UserService
+    public FirstAPIController(IUserService userService) // Constructor injection of UserService
     {
         _userService = userService; // Assign the injected service to a private field
     }
@@ -25,5 +26,7 @@ public class FirstAPIController : ControllerBase
         var users = await _userService.GetUsersAsync(); // Call the method to get users
         return Ok(users);
     }
+
+
 }
 

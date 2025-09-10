@@ -1,0 +1,10 @@
+.user-box[b-6utyd6rw20] {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.user-box img[b-6utyd6rw20] {
+    width: 300px;
+    height: 300px;
+}

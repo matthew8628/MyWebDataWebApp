@@ -1,0 +1,55 @@
+﻿@page
+@model WebApp.Pages.EditUserModel
+@{
+    ViewData["Title"] = "Edit User";
+    var user = Model.User; // Fix: define 'user' from the model
+}
+
+<h1>Edit User:</h1>
+
+<div class="user-box">
+    <form method="post">
+        <input type="hidden" asp-for="User.Id" />
+
+        <label>FirstName:</label>
+        <input asp-for="User.FirstName" /><br />
+
+        <label>LastName:</label>
+        <input asp-for="User.LastName" /><br />
+
+        <label>MaidenName:</label>
+        <input asp-for="User.MaidenName" /><br />
+
+        <label>Age:</label>
+        <input asp-for="User.Age" /><br />
+
+        <label>Gender:</label>
+        <input asp-for="User.Gender" /><br />
+
+        <label>Email:</label>
+        <input asp-for="User.Email" /><br />
+
+        <label>Username:</label>
+        <input asp-for="User.Username" /><br />
+
+        <label>Password:</label>
+        <input asp-for="User.Password" /><br />
+
+        <label>Image:</label>
+        <input asp-for="User.Image" /><br />
+
+        <label>BloodGroup:</label>
+        <input asp-for="User.BloodGroup" /><br />
+
+        <label>Height:</label>
+        <input asp-for="User.Height" /><br />
+
+        <label>Weight:</label>
+        <input asp-for="User.Weight" /><br />
+
+        <label>EyeColor:</label>
+        <input asp-for="User.EyeColor" /><br />
+
+        <button type="submit" asp-page-handler="Save" class="btn btn-success">Save</button>
+    </form>
+</div>

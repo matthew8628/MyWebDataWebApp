@@ -1,0 +1,13 @@
+[
+  {
+    "ContainingType": "WebApi.Controllers.FirstAPIController",
+    "Method": "GetData",
+    "RelativePath": "FirstAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetData"
+  }
+]

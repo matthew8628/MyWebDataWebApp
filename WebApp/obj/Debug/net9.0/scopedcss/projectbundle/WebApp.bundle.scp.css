@@ -1,3 +1,14 @@
+/* _content/WebApp/Pages/DisplayData.cshtml.rz.scp.css */
+.user-box[b-6utyd6rw20] {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.user-box img[b-6utyd6rw20] {
+    width: 300px;
+    height: 300px;
+}
 /* _content/WebApp/Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
