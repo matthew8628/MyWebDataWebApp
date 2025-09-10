@@ -33,35 +33,55 @@ public class UserService : IUserService
             return usersFromDb;
         }
 
-
-
-        // var response = await _httpClient.GetAsync("https://dummyjson.com/users"); Gets the data from the API through set up http client
-        var response = await _httpClient.GetFromJsonAsync<UsersResponse>("https://dummyjson.com/users");
-
-        if (response?.Users != null)
-        {
-            foreach (var user in response.Users)
-            {
-                // Avoid duplicates just in case
-                var existingUser = await _userRepository.GetUserByIdAsync(user.Id);
-                if (existingUser == null)
-                {
-                    await _userRepository.AddUserAsync(user);
-                }
-            }
-
-            // Return the API users (now also saved in the database)
-            return response.Users;
-        }
-
         // If everything fails, return an empty list
         return new List<User>();
 
     }
 
-    /* public async Task<User> UpdateUserAsync()
+    public async Task<User?> GetUserByIdAsync(int id)
     {
-        var usersFromDb = await _userRepository.UpdateUserAsync();
-        return null;
-    } */
+        return await _userRepository.GetUserByIdAsync(id);
+
+    }
+
+    public async Task<User> UpdateUserAsync(User user)
+    {
+        await _userRepository.UpdateUserAsync(user);
+        return user;
+    } 
+
+    public async Task DeleteUserAsync(int id)
+    {
+        await _userRepository.DeleteUserAsync(id);
+
+    }
 }
+
+
+
+
+
+
+
+
+// Legacy code??
+
+/*
+// var response = await _httpClient.GetAsync("https://dummyjson.com/users"); Gets the data from the API through set up http client
+var response = await _httpClient.GetFromJsonAsync<UsersResponse>("https://dummyjson.com/users");
+
+if (response?.Users != null)
+{
+    foreach (var user in response.Users)
+    {
+        // Avoid duplicates just in case
+        var existingUser = await _userRepository.GetUserByIdAsync(user.Id);
+        if (existingUser == null)
+        {
+            await _userRepository.AddUserAsync(user);
+        }
+    }
+
+    // Return the API users (now also saved in the database)
+    return response.Users;
+}  */

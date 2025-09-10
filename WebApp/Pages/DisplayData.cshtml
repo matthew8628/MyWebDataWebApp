@@ -9,6 +9,7 @@
 <table class="table" id="tblUsers">
     <thead>
         <tr>
+            <th></th>
             <th>ID</th>
             <th>FirstName</th>
             <th>LastName</th>
@@ -35,7 +36,12 @@
         // Gets the data from UsersPageModel.cs   as that is bought in at the top with @model UsersPageModel
         {
 
+      
+
         <tr>
+            <td>
+                <a asp-page="/EditUser" asp-route-id="@user.Id" class="btn btn-primary">Edit</a>
+            </td>
             <td>@user.Id</td>
             <td>@user.FirstName</td>
             <td>@user.LastName</td>
@@ -52,13 +58,15 @@
             <td>@user.Height</td>
             <td>@user.Weight</td>
             <td>@user.EyeColor</td>
+            <td>
+                <a asp-page="/EditUser" asp-route-id="@user.Id" class="btn btn-danger">Delete</a>
+            </td>
 
         </tr>
       
         }
     </tbody>
 </table>
-
 
 
 

@@ -11,5 +11,11 @@ namespace Services
     {
         Task<List<Models.User>> GetUsersAsync();
         Task<User> CreateUser(User NewUser);
+
+        Task<User?> GetUserByIdAsync(int id);
+
+        Task<User> UpdateUserAsync(User user);
+
+        Task DeleteUserAsync(int id);
     }
 }

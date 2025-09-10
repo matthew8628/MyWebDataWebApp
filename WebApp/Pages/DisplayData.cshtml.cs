@@ -21,13 +21,13 @@ namespace WebApp.Pages
 
 
 
-        public IActionResult OnPostTestFunc()  // Must start with "OnPost" to handle POST requests
+        public IActionResult OnPostSave() 
         {
             return RedirectToPage("/Index");
         }
 
 
-        public List<User> Users { get; set; } = new(); // 
+        public List<User> Users { get; set; } = new();
 
         public async Task OnGetAsync()
         {

@@ -14,19 +14,28 @@ namespace WebApp.Pages
             _userService = userService;
         }
 
-        public List<User> Users { get; set; } = new();
+
+        [BindProperty]
+        public User User { get; set; } = new();
 
 
-        public async Task OnGetAsync()
+
+        public async Task OnGetAsync(int id)
         {
-            Users = await _userService.GetUsersAsync();
+            var fetchedUser = await _userService.GetUserByIdAsync(id);
+            if (fetchedUser is not null)
+            {
+                User = fetchedUser;
+            }
+            // Optionally, handle the case where the user is not found (fetchedUser is null)
         }
 
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostSaveAsync()
         {
-            Users = await _userService.GetUsersAsync();
+            Console.WriteLine($"Saving user: {User.Id}, {User.FirstName}, {User.Email}");
+            await _userService.UpdateUserAsync(User);
             return Page();
-        }
+        } 
     }
 }

@@ -2,79 +2,54 @@
 @model WebApp.Pages.EditUserModel
 @{
     ViewData["Title"] = "Edit User";
+    var user = Model.User; // Fix: define 'user' from the model
 }
 
 <h1>Edit User:</h1>
 
-
-@foreach (var user in Model.Users)
-
-// Gets the data from UsersPageModel.cs   as that is bought in at the top with @model UsersPageModel
-{
-    <div class="user-box">
-        <br />
-        <button type="submit">Edit User @user.Id</button>
-
-        <br />
-
-        <label>ID:</label>
-        <input type="text" value="@user.Id" readonly/><br />
+<div class="user-box">
+    <form method="post">
+        <input type="hidden" asp-for="User.Id" />
 
         <label>FirstName:</label>
-        <input type="text" value="@user.FirstName" /><br />
+        <input asp-for="User.FirstName" /><br />
 
         <label>LastName:</label>
-        <input type="text" value="@user.LastName" /><br />
+        <input asp-for="User.LastName" /><br />
 
         <label>MaidenName:</label>
-        <input type="text" value="@user.MaidenName" /><br />
+        <input asp-for="User.MaidenName" /><br />
 
         <label>Age:</label>
-        <input type="text" value="@user.Age" /><br />
+        <input asp-for="User.Age" /><br />
 
         <label>Gender:</label>
-        <input type="text" value="@user.Gender" /><br />
+        <input asp-for="User.Gender" /><br />
 
         <label>Email:</label>
-        <input type="text" value="@user.Email" /><br />
+        <input asp-for="User.Email" /><br />
 
         <label>Username:</label>
-        <input type="text" value="@user.Username" /><br />
+        <input asp-for="User.Username" /><br />
 
         <label>Password:</label>
-        <input type="text" value="@user.Password" /><br />
+        <input asp-for="User.Password" /><br />
 
         <label>Image:</label>
-        <br />
-        <img src="@user.Image" alt="@user.Id Image" width="500" height="600">
-
-
-        <br />
+        <input asp-for="User.Image" /><br />
 
         <label>BloodGroup:</label>
-        <input type="text" value="@user.BloodGroup" /><br />
+        <input asp-for="User.BloodGroup" /><br />
 
         <label>Height:</label>
-        <input type="text" value="@user.Height" /><br />
+        <input asp-for="User.Height" /><br />
 
         <label>Weight:</label>
-        <input type="text" value="@user.Weight" /><br />
-
+        <input asp-for="User.Weight" /><br />
 
         <label>EyeColor:</label>
-        <input type="text" value="@user.EyeColor"  /><br />
+        <input asp-for="User.EyeColor" /><br />
 
-
-        <br />
-    </div>
-}
-
-
-
-
-
-
-
-
-
-
+        <button type="submit" asp-page-handler="Save" class="btn btn-success">Save</button>
+    </form>
+</div>
