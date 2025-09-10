@@ -4,89 +4,87 @@
     ViewData["Title"] = "Create User";
 }
 
+
+
+<h1>Create User</h1>
+
 <form method="post">
-    <h1>Create User</h1>
+    <table class="createUserTable" id="createUser">
+        <thead>
+            <tr>
+                <!-- This is the row for header-->
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
 
-    <div>
-        <label asp-for="NewUser.Id"></label>
-        <input asp-for="NewUser.Id" />
-    </div>              
-                        
-                        
-    <div>              
-        <label asp-for="NewUser.FirstName"></label>
-        <input asp-for="NewUser.FirstName" />
-    </div>              
-                        
-    <div>               
-        <label asp-for="NewUser.LastName"></label>
-        <input asp-for="NewUser.LastName" />
-    </div>              
-                        
-                        
-    <div>               
-        <label asp-for="NewUser.MaidenName"></label>
-        <input asp-for="NewUser.MaidenName" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Age"></label>
-        <input asp-for="NewUser.Age" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Gender"></label>
-        <input asp-for="NewUser.Gender" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.FirstName"></label>
-        <input asp-for="NewUser.FirstName" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Email"></label>
-        <input asp-for="NewUser.Email" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Username"></label>
-        <input asp-for="NewUser.Username" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Password"></label>
-        <input asp-for="NewUser.Password" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Image"></label>
-        <input asp-for="NewUser.Image" />
-    </div>
-
-    <br />
-
-    <div>
-        <label asp-for="NewUser.BloodGroup"></label>
-        <input asp-for="NewUser.BloodGroup" />
-    </div>
-
-    <div>
-        <label asp-for="NewUser.Height"></label>
-        <input asp-for="NewUser.Height" />
-    </div>
-    <div>
-        <label asp-for="NewUser.Weight"></label>
-        <input asp-for="NewUser.Weight" />
-    </div>
-
-
-    <div>
-        <label asp-for="NewUser.EyeColor"></label>
-        <input asp-for="NewUser.EyeColor" />
-    </div>
-
-
+        <tbody>
+            <tr>
+                <td><label asp-for="NewUser.Id"></label></td>
+                <td><input asp-for="NewUser.Id" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.FirstName"></label></td>
+                <td><input asp-for="NewUser.FirstName" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.LastName"></label></td>
+                <td><input asp-for="NewUser.LastName" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.MaidenName"></label></td>
+                <td><input asp-for="NewUser.MaidenName" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Age"></label></td>
+                <td><input asp-for="NewUser.Age" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Gender"></label></td>
+                <td><input asp-for="NewUser.Gender" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Email"></label></td>
+                <td><input asp-for="NewUser.Email" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Phone"></label></td>
+                <td><input asp-for="NewUser.Phone" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Username"></label></td>
+                <td><input asp-for="NewUser.Username" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Password"></label></td>
+                <td><input asp-for="NewUser.Password" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.BirthDate"></label></td>
+                <td><input asp-for="NewUser.BirthDate" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Image"></label></td>
+                <td><input asp-for="NewUser.Image" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.BloodGroup"></label></td>
+                <td><input asp-for="NewUser.BloodGroup" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Height"></label></td>
+                <td><input asp-for="NewUser.Height" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.Weight"></label></td>
+                <td><input asp-for="NewUser.Weight" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="NewUser.EyeColor"></label></td>
+                <td><input asp-for="NewUser.EyeColor" /></td>
+            </tr>
+        </tbody>
+        
+    </table>
     <button type="submit">Create User</button>
-
 </form>

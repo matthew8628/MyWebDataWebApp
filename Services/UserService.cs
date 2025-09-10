@@ -59,4 +59,9 @@ public class UserService : IUserService
 
     }
 
+    /* public async Task<User> UpdateUserAsync()
+    {
+        var usersFromDb = await _userRepository.UpdateUserAsync();
+        return null;
+    } */
 }

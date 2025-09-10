@@ -26,5 +26,7 @@ public class FirstAPIController : ControllerBase
         var users = await _userService.GetUsersAsync(); // Call the method to get users
         return Ok(users);
     }
+
+
 }
 

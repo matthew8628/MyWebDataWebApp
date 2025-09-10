@@ -1,0 +1,80 @@
+﻿@page
+@model WebApp.Pages.EditUserModel
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h1>Edit User:</h1>
+
+
+@foreach (var user in Model.Users)
+
+// Gets the data from UsersPageModel.cs   as that is bought in at the top with @model UsersPageModel
+{
+    <div class="user-box">
+        <br />
+        <button type="submit">Edit User @user.Id</button>
+
+        <br />
+
+        <label>ID:</label>
+        <input type="text" value="@user.Id" readonly/><br />
+
+        <label>FirstName:</label>
+        <input type="text" value="@user.FirstName" /><br />
+
+        <label>LastName:</label>
+        <input type="text" value="@user.LastName" /><br />
+
+        <label>MaidenName:</label>
+        <input type="text" value="@user.MaidenName" /><br />
+
+        <label>Age:</label>
+        <input type="text" value="@user.Age" /><br />
+
+        <label>Gender:</label>
+        <input type="text" value="@user.Gender" /><br />
+
+        <label>Email:</label>
+        <input type="text" value="@user.Email" /><br />
+
+        <label>Username:</label>
+        <input type="text" value="@user.Username" /><br />
+
+        <label>Password:</label>
+        <input type="text" value="@user.Password" /><br />
+
+        <label>Image:</label>
+        <br />
+        <img src="@user.Image" alt="@user.Id Image" width="500" height="600">
+
+
+        <br />
+
+        <label>BloodGroup:</label>
+        <input type="text" value="@user.BloodGroup" /><br />
+
+        <label>Height:</label>
+        <input type="text" value="@user.Height" /><br />
+
+        <label>Weight:</label>
+        <input type="text" value="@user.Weight" /><br />
+
+
+        <label>EyeColor:</label>
+        <input type="text" value="@user.EyeColor"  /><br />
+
+
+        <br />
+    </div>
+}
+
+
+
+
+
+
+
+
+
+

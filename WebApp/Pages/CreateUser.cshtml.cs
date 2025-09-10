@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using Services;
@@ -9,8 +10,6 @@ namespace WebApp.Pages
 {
     public class CreateUserModel : PageModel
     {
-
-
         private readonly IUserService _userService; 
 
         public CreateUserModel(IUserService userService)
@@ -25,14 +24,12 @@ namespace WebApp.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-
             var response = await _userService.CreateUser(NewUser);
 
             Console.WriteLine(response);
-            return Page();
+            return RedirectToPage("/DisplayData");
 
             /*
-
             // Send new user to WebAPI
             var response = await _httpClient.PostAsJsonAsync("api/users", User);
 
@@ -44,7 +41,6 @@ namespace WebApp.Pages
             // stay on page if something failed
             ModelState.AddModelError(string.Empty, "Could not create user.");
             return Page();
-
             */
         }
 
