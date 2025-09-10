@@ -16,3 +16,4 @@ namespace DataAccess
         Task DeleteUserAsync(int id);
     }
 }
+

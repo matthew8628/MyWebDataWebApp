@@ -1,4 +1,4 @@
-﻿// xposes that user data from api via an endpoint.
+﻿// Exposes that user data from api via an endpoint.
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;

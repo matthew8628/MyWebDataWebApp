@@ -1,4 +1,4 @@
-﻿// calls an external API to get user data.
+﻿ // calls an external API to get user data.
 namespace Services;
 using DataAccess;
 using Microsoft.EntityFrameworkCore;
@@ -18,27 +18,45 @@ public class UserService : IUserService
         _httpClient = httpClient;
     }
 
+    public async Task<User> CreateUser(User NewUser)
+    {
+        await _userRepository.AddUserAsync(NewUser);
+        return NewUser;
+    }  
+
     public async Task<List<User>> GetUsersAsync() // Method to fetch users
     {
-        
+        var usersFromDb = await _userRepository.GetUsersAsync();
+
+        if (usersFromDb != null && usersFromDb.Any())
+        {
+            return usersFromDb;
+        }
+
+
+
         // var response = await _httpClient.GetAsync("https://dummyjson.com/users"); Gets the data from the API through set up http client
         var response = await _httpClient.GetFromJsonAsync<UsersResponse>("https://dummyjson.com/users");
 
         if (response?.Users != null)
         {
-            foreach(var user in response.Users)
+            foreach (var user in response.Users)
             {
+                // Avoid duplicates just in case
                 var existingUser = await _userRepository.GetUserByIdAsync(user.Id);
-                if(existingUser == null)
+                if (existingUser == null)
                 {
                     await _userRepository.AddUserAsync(user);
                 }
             }
 
-
+            // Return the API users (now also saved in the database)
             return response.Users;
         }
 
-        return await _userRepository.GetUsersAsync();
+        // If everything fails, return an empty list
+        return new List<User>();
+
     }
+
 }

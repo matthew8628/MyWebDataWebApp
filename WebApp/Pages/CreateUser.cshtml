@@ -1,0 +1,92 @@
+﻿@page
+@model WebApp.Pages.CreateUserModel
+@{
+    ViewData["Title"] = "Create User";
+}
+
+<form method="post">
+    <h1>Create User</h1>
+
+    <div>
+        <label asp-for="NewUser.Id"></label>
+        <input asp-for="NewUser.Id" />
+    </div>              
+                        
+                        
+    <div>              
+        <label asp-for="NewUser.FirstName"></label>
+        <input asp-for="NewUser.FirstName" />
+    </div>              
+                        
+    <div>               
+        <label asp-for="NewUser.LastName"></label>
+        <input asp-for="NewUser.LastName" />
+    </div>              
+                        
+                        
+    <div>               
+        <label asp-for="NewUser.MaidenName"></label>
+        <input asp-for="NewUser.MaidenName" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Age"></label>
+        <input asp-for="NewUser.Age" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Gender"></label>
+        <input asp-for="NewUser.Gender" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.FirstName"></label>
+        <input asp-for="NewUser.FirstName" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Email"></label>
+        <input asp-for="NewUser.Email" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Username"></label>
+        <input asp-for="NewUser.Username" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Password"></label>
+        <input asp-for="NewUser.Password" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Image"></label>
+        <input asp-for="NewUser.Image" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="NewUser.BloodGroup"></label>
+        <input asp-for="NewUser.BloodGroup" />
+    </div>
+
+    <div>
+        <label asp-for="NewUser.Height"></label>
+        <input asp-for="NewUser.Height" />
+    </div>
+    <div>
+        <label asp-for="NewUser.Weight"></label>
+        <input asp-for="NewUser.Weight" />
+    </div>
+
+
+    <div>
+        <label asp-for="NewUser.EyeColor"></label>
+        <input asp-for="NewUser.EyeColor" />
+    </div>
+
+
+    <button type="submit">Create User</button>
+
+</form>

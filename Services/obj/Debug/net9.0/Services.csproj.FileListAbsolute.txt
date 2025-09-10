@@ -1,8 +1,3 @@
-C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
-C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
-C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
-C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.sourcelink.json
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\bin\Debug\net9.0\Services.deps.json
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\bin\Debug\net9.0\Services.dll
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\bin\Debug\net9.0\Services.pdb
@@ -11,6 +6,11 @@ C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\bin\Debug\net9.0\Models.dl
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\bin\Debug\net9.0\DataAccess.pdb
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\bin\Debug\net9.0\Models.pdb
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.sourcelink.json
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.csproj.Up2Date
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\Services.dll
 C:\Users\Laptop\source\repos\MyWebDataWebApp\Services\obj\Debug\net9.0\refint\Services.dll
