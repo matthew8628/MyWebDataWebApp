@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Services;
 using System.Security.Cryptography.X509Certificates;
 using Models;
+using System.Text.Json;
 
 namespace WebApp.Pages
 {
@@ -11,14 +12,12 @@ namespace WebApp.Pages
     {
         private readonly ILogger<DisplayDataModel>? _logger;
 
+        private readonly HttpClient _httpClient;
 
-        private readonly IUserService _userService; 
-
-        public DisplayDataModel(IUserService userService)
+        public DisplayDataModel(HttpClient httpClient)
         {
-            _userService = userService; 
+           _httpClient = httpClient;
         }
-
 
 
         public IActionResult OnPostSave() 
@@ -31,7 +30,12 @@ namespace WebApp.Pages
 
         public async Task OnGetAsync()
         {
-            Users = await _userService.GetUsersAsync();
+            var response = await _httpClient.GetAsync("https://localhost:7050/UserAPI");
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            Users = JsonSerializer.Deserialize<List<User>>(json,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
         }
     }
 }

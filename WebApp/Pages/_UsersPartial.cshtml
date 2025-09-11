@@ -1,0 +1,26 @@
+﻿@model Models.User
+<tr>
+    <td>
+        <a asp-page="/EditUser" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    </td>
+    <td>@Model.Id</td>
+    <td>@Model.FirstName</td>
+    <td>@Model.LastName</td>
+    <td>@Model.MaidenName</td>
+    <td>@Model.Age</td>
+    <td>@Model.Gender</td>
+    <td>@Model.Email</td>
+    <td>@Model.Username</td>
+    <td>@Model.Password</td>
+    <td>
+        <img src="@Model.Image" alt="@Model.Id Image" width="100" height="120">
+    </td>
+    <td>@Model.BloodGroup</td>
+    <td>@Model.Height</td>
+    <td>@Model.Weight</td>
+    <td>@Model.EyeColor</td>
+    <td>
+        <a asp-page="/DeleteUser" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    </td>
+
+</tr>

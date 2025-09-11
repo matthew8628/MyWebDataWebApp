@@ -9,7 +9,7 @@ namespace Services
 {
     public interface IUserService
     {
-        Task<List<Models.User>> GetUsersAsync();
+        Task<List<User>> GetUsersAsync();
         Task<User> CreateUser(User NewUser);
 
         Task<User?> GetUserByIdAsync(int id);

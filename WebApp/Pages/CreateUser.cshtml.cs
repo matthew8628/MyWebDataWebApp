@@ -1,3 +1,4 @@
+using Azure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.CodeAnalysis;
@@ -10,11 +11,11 @@ namespace WebApp.Pages
 {
     public class CreateUserModel : PageModel
     {
-        private readonly IUserService _userService; 
+        private readonly HttpClient _httpClient; 
 
-        public CreateUserModel(IUserService userService)
+        public CreateUserModel(HttpClient httpClient)
         {
-            _userService = userService;  // Inject the IUserService
+            _httpClient = httpClient;  // Inject the IUserService
         }
 
 
@@ -22,26 +23,17 @@ namespace WebApp.Pages
         public User NewUser { get; set; } = new(); // Create a new instance of User to hold the form data
 
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync() // Handle form submission
         {
-            var response = await _userService.CreateUser(NewUser);
-
-            Console.WriteLine(response);
-            return RedirectToPage("/DisplayData");
-
-            /*
-            // Send new user to WebAPI
-            var response = await _httpClient.PostAsJsonAsync("api/users", User);
+            var response = await _httpClient.PostAsJsonAsync("https://localhost:7050/UserAPI", NewUser);
 
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToPage("/DisplayData"); // go back to list after create
             }
 
-            // stay on page if something failed
-            ModelState.AddModelError(string.Empty, "Could not create user.");
             return Page();
-            */
+
         }
 
         public void OnGet()

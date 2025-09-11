@@ -1,13 +1,30 @@
 [
   {
-    "ContainingType": "WebApi.Controllers.FirstAPIController",
+    "ContainingType": "WebApi.Controllers.UserAPIcontroller",
     "Method": "GetData",
-    "RelativePath": "FirstAPI",
+    "RelativePath": "UserAPI",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [],
     "EndpointName": "GetData"
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAPIcontroller",
+    "Method": "CreateUserAsync",
+    "RelativePath": "UserAPI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NewUser",
+        "Type": "Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "CreateUser"
   }
 ]

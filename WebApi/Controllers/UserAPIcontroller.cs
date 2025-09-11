@@ -11,11 +11,11 @@ using Services;
 namespace WebApi.Controllers;
 [ApiController]
 [Route("[controller]")]
-public class FirstAPIController : ControllerBase
+public class UserAPIcontroller : ControllerBase
 {
     private readonly IUserService _userService;
 
-    public FirstAPIController(IUserService userService) // Constructor injection of UserService
+    public UserAPIcontroller(IUserService userService) // Constructor injection of UserService
     {
         _userService = userService; // Assign the injected service to a private field
     }
@@ -27,6 +27,10 @@ public class FirstAPIController : ControllerBase
         return Ok(users);
     }
 
-
+    [HttpPost(Name = "CreateUser")]
+    public async Task<IActionResult> CreateUserAsync(User NewUser)
+    {
+        await _userService.CreateUser(NewUser);
+        return RedirectToPage("/DisplayData");
+    }
 }
-
