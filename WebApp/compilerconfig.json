@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/_common.css",
+    "inputFile": "wwwroot/css/_common.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/_fonts.css",
+    "inputFile": "wwwroot/css/_fonts.scss"
+  }
+]

@@ -1,0 +1,52 @@
+// To add fonts easily, add a row to the typefaces variable in the following format
+// 'Font Name' 'file-name-without-extension' 'font-weight' 'font-style'
+//
+// Example:
+// $typefaces: (
+//     'Open-Sans' 'open-sans-300-normal-1ddc6d8a7' 300 normal,
+//     'Open-Sans' 'open-sans-400-normal-9d7d34da6' 400 normal,
+//     'Open-Sans' 'open-sans-700-normal-d7d1a967a' 700 normal
+// );
+//
+// Note: Make sure the font file is available in ttf, woff and woff2
+
+$typefaces: ();
+
+@font-face {
+  font-family: 'Inter';
+  src: url('#{$fa-font-path}/Inter-Medium.eot');
+  src: url('#{$fa-font-path}/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+      url('#{$fa-font-path}/Inter-Medium.woff2') format('woff2'),
+      url('#{$fa-font-path}/Inter-Medium.woff') format('woff'),
+      url('#{$fa-font-path}/Inter-Medium.ttf') format('truetype'),
+      url('#{$fa-font-path}/Inter-Medium.svg#Inter-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('#{$fa-font-path}/Inter-Regular.eot');
+  src: url('#{$fa-font-path}/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+      url('#{$fa-font-path}/Inter-Regular.woff2') format('woff2'),
+      url('#{$fa-font-path}/Inter-Regular.woff') format('woff'),
+      url('#{$fa-font-path}/Inter-Regular.ttf') format('truetype'),
+      url('#{$fa-font-path}/Inter-Regular.svg#Inter-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('#{$fa-font-path}/Inter-SemiBold.eot');
+  src: url('#{$fa-font-path}/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('#{$fa-font-path}/Inter-SemiBold.woff2') format('woff2'),
+      url('#{$fa-font-path}/Inter-SemiBold.woff') format('woff'),
+      url('#{$fa-font-path}/Inter-SemiBold.ttf') format('truetype'),
+      url('#{$fa-font-path}/Inter-SemiBold.svg#Inter-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Run",
+    "Projects": [
+      {
+        "Path": "WebApp\\WebApp.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "WebApi\\WebApi.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

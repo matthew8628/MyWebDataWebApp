@@ -1,0 +1,18 @@
+﻿:root {
+    --PTS-neutral-color: #FFFFF0;
+    --PTS-purple-tint-25: #EBE8F2;
+    --PTS-purple-tint-50: #D3CDE4;
+    --PTS-purple-tint-200: #877EA2;
+    --PTS-purple-tint-100: #ADA6C5;
+    --PTS-purple-tint-400: #6F6789;
+    --PTS-blue: #3E62EF;
+    --PTS-light-blue: #4791FF;
+    --PTS-light-blue-opacity-30: #4791FF;
+    --PTS-purple: #1C1531;
+    --PTS-orange: #EC733D;
+    --PTS-neutral-grey: #DFDFDF;
+    --PTS-headings-font-family: 'syne', Inter, sans-serif;
+    --PTS-body-font-family: 'Inter';    
+    --PTS-red: #EC4040;
+    --PTS-error: #EC4040;
+}

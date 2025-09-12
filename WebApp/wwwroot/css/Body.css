@@ -1,0 +1,423 @@
+.body-1 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px !important;
+    line-height: 120% !important;
+}
+
+.body-2, td, p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px !important;
+    line-height: 26px !important;
+}
+
+.body-3, span, div, li, label {
+    font-family: "Inter", sans-serif;
+    font-size: 14px !important;
+    line-height: 24px !important;
+}
+.underline {
+    text-decoration: underline;
+}
+label {
+    font-weight: 700 !important;
+}
+
+th {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--PTS-purple-tint-400) !important;
+    line-height: 120% !important;
+    text-transform: uppercase;
+}
+
+.caption-1 {
+    font-size: 11px;
+    color: var(--PTS-purple-tint-400) !important;
+    line-height: 120% !important;
+}
+
+.pts-border-neutral {
+    border-color: var(--PTS-neutral-color) !important;
+}
+.pts-text-neutral {
+    color: var(--PTS-neutral-color) !important;
+}
+.pts-text-neutral svg path {
+    fill: var(--PTS-neutral-color) !important;
+}
+.pts-bg-neutral {
+    background-color: var(--PTS-neutral-color) !important;
+}
+.pts-hover-border-neutral:hover {
+    border-color: var(--PTS-neutral-color) !important;
+}
+.pts-hover-text-neutral:hover {
+    color: var(--PTS-neutral-color) !important;
+}
+.pts-hover-text-neutral:hover svg path {
+    fill: var(--PTS-neutral-color) !important;
+}
+.pts-hover-bg-neutral:hover {
+    background-color: var(--PTS-neutral-color) !important;
+}
+.pts-active-bg-neutral:active {
+    background-color: var(--PTS-neutral-color) !important;
+}
+
+.pts-border-purple {
+    border-color: var(--PTS-purple) !important;
+}
+.pts-text-purple {
+    color: var(--PTS-purple) !important;
+}
+.pts-text-purple svg path {
+    fill: var(--PTS-purple) !important;
+}
+.pts-bg-purple {
+    background-color: var(--PTS-purple) !important;
+}
+.pts-hover-border-purple:hover {
+    border-color: var(--PTS-purple) !important;
+}
+.pts-hover-text-purple:hover {
+    color: var(--PTS-purple) !important;
+}
+.pts-hover-text-purple:hover svg path {
+    fill: var(--PTS-purple) !important;
+}
+.pts-hover-bg-purple:hover {
+    background-color: var(--PTS-purple) !important;
+}
+.pts-active-bg-purple:active {
+    background-color: var(--PTS-purple) !important;
+}
+
+.pts-border-blue {
+    border-color: var(--PTS-blue) !important;
+}
+.pts-text-blue {
+    color: var(--PTS-blue) !important;
+}
+.pts-text-blue svg path {
+    fill: var(--PTS-blue) !important;
+}
+.pts-bg-blue {
+    background-color: var(--PTS-blue) !important;
+}
+.pts-hover-border-blue:hover {
+    border-color: var(--PTS-blue) !important;
+}
+.pts-hover-text-blue:hover {
+    color: var(--PTS-blue) !important;
+}
+.pts-hover-text-blue:hover svg path {
+    fill: var(--PTS-blue) !important;
+}
+.pts-hover-bg-blue:hover {
+    background-color: var(--PTS-blue) !important;
+}
+.pts-active-bg-blue:active {
+    background-color: var(--PTS-blue) !important;
+}
+.pts-active-text-blue:active {
+    color: var(--PTS-blue) !important;
+}
+
+.pts-border-orange {
+    border-color: var(--PTS-orange) !important;
+}
+.pts-text-orange {
+    color: var(--PTS-orange) !important;
+}
+.pts-text-orange svg path {
+    fill: var(--PTS-orange) !important;
+}
+.pts-bg-orange {
+    background-color: var(--PTS-orange) !important;
+}
+.pts-hover-border-orange:hover {
+    border-color: var(--PTS-orange) !important;
+}
+.pts-hover-text-orange:hover {
+    color: var(--PTS-orange) !important;
+}
+.pts-hover-text-orange:hover svg path {
+    fill: var(--PTS-orange) !important;
+}
+.pts-hover-bg-orange:hover {
+    background-color: var(--PTS-orange) !important;
+}
+.pts-active-bg-orange:active {
+    background-color: var(--PTS-orange) !important;
+}
+
+.pts-border-neutral-grey {
+    border-color: var(--PTS-neutral-grey) !important;
+}
+.pts-text-neutral-grey {
+    color: var(--PTS-neutral-grey) !important;
+}
+.pts-text-neutral-grey svg path {
+    fill: var(--PTS-neutral-grey) !important;
+}
+.pts-bg-neutral-grey {
+    background-color: var(--PTS-neutral-grey) !important;
+}
+
+.pts-border-purple-tint-25 {
+    border-color: var(--PTS-purple-tint-25) !important;
+}
+.pts-text-purple-tint-25 {
+    color: var(--PTS-purple-tint-25) !important;
+}
+.pts-text-purple-tint-25 svg path {
+    fill: var(--PTS-purple-tint-25) !important;
+}
+.pts-bg-purple-tint-25 {
+    background-color: var(--PTS-purple-tint-25) !important;
+}
+
+.pts-border-purple-tint-50 {
+    border-color: var(--PTS-purple-tint-50) !important;
+}
+.pts-text-purple-tint-50 {
+    color: var(--PTS-purple-tint-50) !important;
+}
+.pts-text-purple-tint-50 svg path {
+    fill: var(--PTS-purple-tint-50) !important;
+}
+.pts-bg-purple-tint-50 {
+    background-color: var(--PTS-purple-tint-50) !important;
+}
+.pts-hover-bg-purple-tint-50:hover {
+    background-color: var(--PTS-purple-tint-50) !important;
+}
+.pts-active-bg-purple-tint-50:active {
+    background-color: var(--PTS-purple-tint-50) !important;
+}
+.pts-hover-border-purple-tint-50:hover {
+    border-color: var(--PTS-purple-tint-50) !important;
+}
+.pts-active-border-purple-tint-50:active {
+    border-color: var(--PTS-purple-tint-50) !important;
+}
+
+.pts-border-purple-tint-100 {
+    border-color: var(--PTS-purple-tint-100) !important;
+}
+.pts-text-purple-tint-100 {
+    color: var(--PTS-purple-tint-100) !important;
+}
+.pts-text-purple-tint-100 svg path {
+    fill: var(--PTS-purple-tint-100) !important;
+}
+.pts-bg-purple-tint-100 {
+    background-color: var(--PTS-purple-tint-100) !important;
+}
+
+.pts-border-purple-tint-200 {
+    border-color: var(--PTS-purple-tint-200) !important;
+}
+.pts-text-purple-tint-200 {
+    color: var(--PTS-purple-tint-200) !important;
+}
+.pts-text-purple-tint-200 svg path {
+    fill: var(--PTS-purple-tint-200) !important;
+}
+.pts-bg-purple-tint-200 {
+    background-color: var(--PTS-purple-tint-200) !important;
+}
+
+.pts-border-purple-tint-400 {
+    border-color: var(--PTS-purple-tint-400) !important;
+}
+.pts-text-purple-tint-400 {
+    color: var(--PTS-purple-tint-400) !important;
+}
+.pts-text-purple-tint-400 svg path {
+    fill: var(--PTS-purple-tint-400) !important;
+}
+.pts-bg-purple-tint-400 {
+    background-color: var(--PTS-purple-tint-400) !important;
+}
+
+.pts-hover-bg-transparent:hover {
+    background-color: transparent !important;
+}
+
+.pts-border-red {
+    border-color: var(--PTS-red) !important;
+}
+.pts-text-red {
+    color: var(--PTS-red) !important;
+}
+.pts-text-red svg path {
+    fill: var(--PTS-red) !important;
+}
+.pts-bg-red {
+    background-color: var(--PTS-red) !important;
+}
+.pts-hover-bg-red:hover {
+    background-color: var(--PTS-red) !important;
+}
+.pts-hover-text-red:hover {
+    color: var(--PTS-red) !important;
+}
+.pts-hover-text-red:hover svg path {
+    fill: var(--PTS-red) !important;
+}
+
+.pts-text-light-blue {
+    color: var(--PTS-light-blue) !important;
+}
+.pts-text-light-blue svg path {
+    fill: var(--PTS-light-blue) !important;
+}
+.pts-bg-light-blue {
+    background-color: var(--PTS-light-blue) !important;
+}
+.pts-border-light-blue {
+    border-color: var(--PTS-light-blue) !important;
+}
+.pts-hover-text-light-blue:hover {
+    color: var(--PTS-light-blue) !important;
+}
+.pts-hover-text-light-blue:hover svg path {
+    fill: var(--PTS-light-blue) !important;
+}
+.pts-hover-bg-light-blue:hover {
+    background-color: var(--PTS-light-blue) !important;
+}
+.pts-hover-border-light-blue:hover {
+    border-color: var(--PTS-light-blue) !important;
+}
+
+.pts-hover-text-underline:hover {
+    text-decoration: underline !important;
+}
+
+.pts-border-width-1 {
+    border-width: 1px !important;
+}
+
+.inline {
+    display: inline !important;
+}
+
+/*bold styles*/
+.bold {
+    font-weight: 700 !important;
+}
+
+.upper{
+    text-transform: uppercase !important;
+}
+
+.text-no-wrap {
+    text-wrap: nowrap !important;
+}
+
+/* Customised Font related classes starts here */
+.font-11px {
+    font-size:11px !important;
+}
+.font-12px {
+    font-size: 12px !important;
+}
+.font-13px {
+    font-size: 13px !important;
+}
+.font-14px {
+    font-size: 14px !important;
+}
+.font-15px {
+    font-size: 15px !important;
+}
+.font-16px {
+    font-size: 16px !important;
+}
+.font-17px {
+    font-size: 17px !important;
+}
+.font-18px {
+    font-size: 18px !important;
+}
+.font-24px {
+    font-size: 24px !important;
+}
+.font-28px {
+    font-size: 28px !important;
+}
+.font-32px {
+    font-size: 32px !important;
+}
+
+.font-weight-400 {
+    font-weight: 400 !important;
+}
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+.font-weight-600 {
+    font-weight: 600 !important;
+}
+.font-weight-700 {
+    font-weight: 700 !important;
+}
+.font-weight-800 {
+    font-weight: 800 !important;
+}
+/* Customised Font related classes ends here */
+
+.border-8 {
+    border-radius: 8px;
+}
+.border-10 {
+    border-radius: 10px;
+}
+.border-20 {
+    border-radius: 20px;
+}
+
+/* Margin & Padding related classes starts here */
+.margin-left-10px {
+    margin-left: 10px !important;
+}
+
+.padding-24 {
+    padding: 24px;
+}
+
+.margin-left-5rem {
+    margin-left: 5rem !important;
+}
+
+/* Margin & Padding related classes ends here */
+pts-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pts-inter-font {
+    font-family: var(--PTS-body-font-family) !important;
+}
+.pts-syne-font {
+    font-family: var(--PTS-headings-font-family) !important;
+}
+
+.visibility-hidden {
+    visibility: hidden !important;
+}
+
+.imagesettingtext {
+    align-content: center;
+}
+
+.imageSettingText p {
+    font-size: 15px !important;
+}
+
+#profileContainer {
+    height: 100%; /* This will make it match the height of the row */
+}

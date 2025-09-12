@@ -4,91 +4,99 @@
     ViewData["Title"] = "Create User";
 }
 
+<link href="css/_common.scss" rel="stylesheet" type="text/css">
+<link href="CSS/Login-Register-Forget-Pass.css" rel="stylesheet" type="text/css">
+<link href="CSS/Body.css" rel="stylesheet" type="text/css">
+<link href="wwwroot/css/_fonts.css" rel="stylesheet" type="text/css">
+
 
 
 <h1>Create User</h1>
 
-<form method="post">
-    <table class="createUserTable" id="createUser">
-        <thead>
-            <tr>
-                <!-- This is the row for header-->
-                <th>Field</th>
-                <th>Value</th>
-            </tr>
-        </thead>
+<div class="login-form pt-3 pb-3">
+    <form id="formLogIn" class="mt-2"   method="post">
+        <table class="createUserTable" id="createUser">
+            <thead>
+                <tr>
+                    <!-- This is the row for header-->
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr>
-                <td><label asp-for="NewUser.Id"></label></td>
-                <td><input asp-for="NewUser.Id" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.FirstName"></label></td>
-                <td><input asp-for="NewUser.FirstName" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.LastName"></label></td>
-                <td><input asp-for="NewUser.LastName" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.MaidenName"></label></td>
-                <td><input asp-for="NewUser.MaidenName" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Age"></label></td>
-                <td><input asp-for="NewUser.Age" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Gender"></label></td>
-                <td><input asp-for="NewUser.Gender" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Email"></label></td>
-                <td><input asp-for="NewUser.Email" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Phone"></label></td>
-                <td><input asp-for="NewUser.Phone" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Username"></label></td>
-                <td><input asp-for="NewUser.Username" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Password"></label></td>
-                <td><input asp-for="NewUser.Password" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.BirthDate"></label></td>
-                <td><input asp-for="NewUser.BirthDate" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Image"></label></td>
-                <td><input asp-for="NewUser.Image" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.BloodGroup"></label></td>
-                <td><input asp-for="NewUser.BloodGroup" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Height"></label></td>
-                <td><input asp-for="NewUser.Height" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.Weight"></label></td>
-                <td><input asp-for="NewUser.Weight" /></td>
-            </tr>
-            <tr>
-                <td><label asp-for="NewUser.EyeColor"></label></td>
-                <td><input asp-for="NewUser.EyeColor" /></td>
-            </tr>
-        </tbody>
-        
-    </table>
-    <button type="submit">Create User</button>
-</form>
-<br />
+            <tbody>
+                <tr>
+                    <td> <label for class="login-label">Id</label>   </td>
+                    <td><input asp-for="NewUser.Id" id="Id" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.FirstName"></label></td>
+                    <td><input asp-for="NewUser.FirstName" id="FirstName" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.LastName"></label></td>
+                    <td><input asp-for="NewUser.LastName" id="LastName" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.MaidenName"></label></td>
+                    <td><input asp-for="NewUser.MaidenName" id="MaidenName" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Age"></label></td>
+                    <td><input asp-for="NewUser.Age" id="Age" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Gender"></label></td>
+                    <td><input asp-for="NewUser.Gender" id="Gender" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Email"></label></td>
+                    <td><input asp-for="NewUser.Email" id="Email" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Phone"></label></td>
+                    <td><input asp-for="NewUser.Phone" id="Phone" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Username"></label></td>
+                    <td><input asp-for="NewUser.Username" id="Username" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Password"></label></td>
+                    <td><input asp-for="NewUser.Password" id="Password" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.BirthDate"></label></td>
+                    <td><input asp-for="NewUser.BirthDate" id="BirthDate" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Image"></label></td>
+                    <td><input asp-for="NewUser.Image" id="Image" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.BloodGroup"></label></td>
+                    <td><input asp-for="NewUser.BloodGroup" id="BloodGroup" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Height"></label></td>
+                    <td><input asp-for="NewUser.Height" id="Height" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.Weight"></label></td>
+                    <td><input asp-for="NewUser.Weight" id="Weight" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="NewUser.EyeColor"></label></td>
+                    <td><input asp-for="NewUser.EyeColor" id="EyeColor" class="form-control valid" placeholder aria-invalid="false" /></td>
+                </tr>
+            </tbody>
+
+        </table>
+        <button class="pts-btn pts-bg-blue btn-block pts-text-neutral" type="submit" id="loginBtn">Create User</button>
+    </form>
+    <br />
+</div>
+
 
 
 

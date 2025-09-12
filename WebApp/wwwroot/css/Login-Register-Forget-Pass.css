@@ -1,0 +1,257 @@
+﻿@media (min-width: 768px) {
+    .login-wrap {
+        min-height: 500px;
+        height: 100vh;
+    }
+}
+
+.login-wrap .site-logo img {
+    max-height: 50px;
+}
+
+.login-wrap .right-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .login-wrap .right-area {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.login-wrap .back-to-prev {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .login-wrap .back-to-prev {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.login-wrap .back-text {
+    color: #676978;
+    font-size: 14px;
+    line-height: 1.25rem;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .login-wrap .back-text {
+        display: none !important;
+    }
+}
+
+.login-wrap .login-form {
+    max-width: 420px;
+    width: 100%;
+    margin: auto;
+}
+
+.login-wrap .login-form__heading {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #FFF;
+    font-weight: 500;
+    font-family: var(--PTS-headings-font-family);
+}
+
+.login-wrap .login-form__text {
+    margin-bottom: 2rem;
+    font-size: 14px;
+    line-height: 1.5rem;
+    color: var(--PTS-neutral-color);
+    word-break: break-word;
+    font-family: 'Inter';
+}
+
+.login-wrap .forgot-password__link {
+    font-size: 13px;
+    line-height: 1.5rem;
+    color: var(--PTS-neutral-color);
+    font-family: 'Inter'
+}
+
+.login-wrap .back-arrow {
+    position: absolute;
+    left: 1rem;
+    top: auto;
+    right: auto;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .login-wrap .back-arrow {
+        left: 2rem;
+        top: 2rem;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+.login-wrap .back-arrow img {
+    display: block;
+    margin-right: 0.5rem;
+}
+
+.login-wrap .input-msg {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
+    .login-wrap .site-logo {
+        display: inline-block;
+        margin-top: 2rem;
+        margin-left: 10rem;
+    }
+}
+
+/* CSS for tablets starts here */
+@media (min-width:768px) and (max-width: 991.98px) {
+    .login-wrap .site-logo {
+        display: inline-block;
+        margin-top: 3rem;
+        margin-left: 5.5rem;
+    }
+}
+/* CSS for tablets ends here */
+
+
+/* CSS for desktop starts here */
+@media  (min-width:992px) and (max-width: 1199.98px) {
+    .login-wrap .site-logo {
+        display: inline-block;
+        margin-top: 3rem;
+        margin-left: 9rem;
+    }
+}
+/* CSS for desktop ends here */
+
+/* CSS for large desktop starts here */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .login-wrap .site-logo {
+        display: inline-block;
+        margin-top: 3rem;
+        margin-left: 11rem;
+    }
+}
+/* CSS for large desktop ends here */
+
+/* CSS for extra large desktop starts here */
+@media (min-width:1400px) {
+    .login-wrap .site-logo {
+        display: inline-block;
+        margin-top: 5rem;
+        margin-left: 14rem;
+    }
+}
+
+
+
+
+.login_image {
+    height: 850px;
+    border-radius: 50px;
+}
+
+#formLogIn label,
+#formSingUp label,
+#forgot-password label,
+#ResetPassword label,
+#reset-code-form label,
+#passwordResetForm label {
+    font-size: 15px;
+    color: var(--PTS-neutral-color);
+    font-weight: 800;
+    text-transform: none !important;
+}
+
+
+#formLogIn .form-control,
+#formSingUp .form-control,
+#forgot-password .form-control,
+#ResetPassword .form-control,
+#reset-code-form .form-control,
+#passwordResetForm .form-control {
+    background-color: var(--PTS-neutral-color) !important;
+    color: var(--PTS-purple-tint-400) !important;
+}
+
+#formLogIn input:-webkit-autofill {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+#formLogIn input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+#formLogIn #loginBtn,
+#formSingUp #btnSignUp,
+#forgot-password #btn-sumbit,
+#reset-code-form #btn-code-submit,
+#ResetPassword #btn-sumbit1 {
+    padding: 0.5rem 1rem;
+    font-weight: 500;    
+    border-radius: 25px;
+}
+
+.user-email-label {
+    display: flex;
+}
+
+.login-wrap .left-area {
+    background-image: url(/Content/img/9-16hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    height: auto;
+}
+
+    @media (max-width: 1280px) {
+        .site-logo img {
+            width: 80%;
+        }
+    }
+
+    .login-wrap .login-form__text strong {
+        font-weight: 800;
+    }
+
+
+    #formSingUp input:-webkit-autofill {
+        transition: background-color 0s 600000s, color 0s 600000s !important;
+    }
+
+        #formSingUp input:-webkit-autofill:focus {
+            transition: background-color 0s 600000s, color 0s 600000s !important;
+        }
+
+    #formLogIn span.error,
+    #formSingUp .validPad-Cust,
+    #forgot-password span.error,
+    /*#ResetPassword span.error,*/
+    #reset-code-form span.error,
+    #passwordResetForm span.error {
+        font-family: 'Inter';
+        color: var(--PTS-neutral-color) !important;
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+
+    .input-helper-text {
+        font-size: 12px;
+        color: var(--PTS-neutral-color);
+        /*line-height: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    display: block;*/
+    }

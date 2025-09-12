@@ -1,0 +1,565 @@
+﻿@import "pts-variables";
+@import "pts-mixins";
+a{outline: none;}
+.pts-sub-header {
+    display:none;
+    .header-container{padding:0 80px;
+        ul li a {line-height: 1.6;
+            img{position: static;}
+        }
+    }
+   
+    @media (max-width: 991px) {
+        .header-container{
+            padding:0 15px ;
+        }
+    }
+}
+
+/*---- login page ----*/
+
+.login-page {
+    background:#fff;
+    .login-container {
+        min-height: calc(100vh - 40px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px 0;
+        label,
+        input,
+        a {
+            width: 100%;
+            display: block;
+        }
+
+        ul li + li {
+            margin-top: 20px;
+        }
+
+        a {
+            margin-bottom: 10px;
+            color: $clr-purple;
+            text-align: center;
+            @include font(16px, 20px, 500);
+            &:hover{text-decoration: underline;}
+        }
+
+        p {
+            color: rgb(113, 113, 113);
+            font-size: 11px;
+            margin-bottom: 20px;
+
+            span.inline,
+            a.inline {
+                display: inline;
+            }
+        }
+
+        .login-box {        
+            width: 302px;
+            background-color: $clr-white;
+            margin: 0 auto;
+            font-size: 13px;
+            max-width:340px;width:100%;padding: 10px 15px;
+            input[type="text"], input[type="password"]{
+                background: none;
+                border-radius:3px;
+                border-color:#959595;
+                height:46px;
+                padding: 4px 6px;
+                outline: none;
+                color:#000;
+            @include font(16px, 20px, 500);
+
+            }
+            label{
+                color: #000;
+                font-size: 16px;
+background: #fff;
+padding-left: 2px;
+font-weight:500;
+padding-right: 3px;
+            }
+            h1 {
+                @include font(36px, 40px, 500);
+                text-align: center;
+                margin: 15px auto 30px auto;
+                color: #7136A2;
+                span {
+                    color: #7136A2;
+                }
+            }
+
+            button {
+                background: #7338A5;
+                font-size: 16px;
+                border: 0 none;
+                color: #fff;
+                margin: 30px auto;
+                display: block;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 12px 25px;
+                font-weight: 500;
+                text-transform: capitalize;
+                min-width: 140px;
+                     &:hover {
+                   background:#8543BE;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+/* css End Login Page */
+/* css start Forget Page */
+
+.forget-page {
+    /*background: url(../images/beach-work.jpeg) no-repeat top center;
+    background-size: 100%;
+    height: 100%;*/
+    @extend .login-page;
+    .forget-container {
+        min-height: calc(100vh - 40px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px 0;
+@extend .login-container;
+        label,
+        input,
+        a {
+            width: 100%;
+            display: block;
+        }
+
+        ul li + li {
+            margin-top: 20px;
+        }
+
+        a {
+            margin-bottom: 10px;
+            color: $clr-purple;
+            text-align: center;
+            @include font(16px, 20px, 500);
+            &:hover{text-decoration: underline;}
+        }
+
+        p {
+            font-size: 14px;
+            color: $clr-purple;
+            margin-bottom: 20px;
+            font-weight:500;
+            line-height: 1.5;
+            text-align:center;
+        }
+
+        .forget-box {
+            max-width: 500px;
+            width:100%;
+            margin: 0 auto;
+            padding: 10px 15px;
+            font-size: 13px;
+            form{
+                max-width:302px;margin: auto;
+            }
+            label{
+                color: #000;
+                font-size: 16px;
+background: #fff;
+padding-left: 2px;
+font-weight:500;
+padding-right: 3px;
+            }
+            input[type="text"], input[type="password"]{
+                background: none;
+                border-radius:3px;
+                border-color:#959595;
+                height:46px;
+                padding: 4px 6px;
+                outline: none;
+                color:#000;
+            @include font(16px, 20px, 500);
+
+            }
+            h1 {
+                @include font(30px, 40px, 500);
+                text-align: center;
+                margin: 15px auto 30px auto;
+                color: #7136A2;
+                span {
+                    color: #7136A2;
+                }
+            }
+
+            button {
+                background:#7338A5;
+                font-size: 16px;
+                border: 0 none;
+                color: #fff;
+                margin: 30px auto;
+                display: block;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 12px 25px;
+                font-weight: 500;
+                text-transform: capitalize;
+                min-width: 140px;
+                &:hover {
+                   background:#8543BE;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* css end Forget Page */
+.password-field a{top:12px !important;}
+           
+.control-label {
+    transform: translate3d(10px, -31px, 0) scale(1);
+    -webkit-transform: translate3d(10px, -31px, 0) scale(1);    
+}
+.form-group.focused .control-label {  
+    transform: translate3d(10px, -53px, 0) scale(0.9);
+    -webkit-transform: translate3d(10px, -53px, 0) scale(0.9);
+font-size: 13px !important;
+}
+.header{
+    .row{display: flex;justify-content: flex-start;margin:0;}
+    .logo-wrapper {
+        width: 164px;flex-shrink: 0;
+    }
+    .nav{width:100%;
+        > ul{justify-content: flex-start;
+        > li{margin-right: 8%;
+        > a{font-size:16px;height: 69px;padding-top:3px;
+            &:after{
+                border-radius: 3px 3px 0 0;
+            }
+                    img{margin-right: 6px;}
+        }
+        }
+        }
+    }
+}
+.header-secondary-nav{width:30%;flex-shrink: 0;
+    ul{
+        ul{position: absolute;right:0;top:100%;background:#fff;width:115px;display: none;
+            box-shadow: 0px 0px 10px #E6E4FA4D;
+            border: 1px solid #EFEFEF;
+            border-radius: 0px 0px 5px 5px;
+            flex-flow: wrap;
+            z-index: 9999;
+            li{margin:0;width:100%;
+                a{font-size: 14px; color:#474747;display: flex;padding:10px;}
+                &:last-child{
+                    border-top: 1px solid #EFEFEF;
+                }
+                img{margin-right:10px ;}
+            }
+        }
+        .user-box{position: relative;
+            > a{white-space: nowrap;
+            img{border-radius: 50%;}
+            }
+        &:hover{
+            ul{display: block;}
+        }
+        }
+
+    }
+}
+.dashboard-heading{
+    .overlay {
+        @include pos(fixed, 0, null, null, 0, 999);
+        @include calculate-width(1);
+        display: block;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    } 
+    .calenderDate{position: relative;
+        input[type="text"]{color:#4F5054;font-size: 12px;border:#DCD6EA;border-radius: 5px 0 0 5px;}
+        span{font-size: 16px;}
+        .dashboard-calender{width:334px;position: absolute;right:0;top:100%;z-index: 9999;
+        .date-picker-wrapper {
+            .month-wrapper{padding:15px 0;border-radius: 15px;}
+        }
+        .date-picker-wrapper table .caption > th:first-of-type{padding-left:15px;padding-bottom:20px;}
+        }
+    }
+    .calender-input{position: relative;
+        .calender-icon{text-align: center;
+background:rgba(88, 36, 132,0.15);position: absolute;right:0;top:0;padding:10px;height: 32px;width:32px;
+        }
+    }
+   
+} 
+
+
+.range-li{
+    flex:0 0 38.5% !important;
+    .flex-row{align-items: center;margin-bottom:0;
+        span{width:16%;font-size: 14px;color:#000;text-align: center;}
+    }
+}
+.table-wrap{
+    .no-result{
+        font-size: 22px;
+        color:#ACB2C4;
+        text-align: center;
+        margin:20px 0 10px;
+    }
+}
+.search-result-table .filter label {
+    color:#000;
+    }
+#clientDetails .table-wrap{
+  >  h2{
+        float: left;
+margin-top: -35px;
+font-size: 18px;
+color: #000;
+margin-bottom: 25px;
+    }
+}
+.client-form-section {
+    padding: 0 15px;
+    border-top: 0;
+    margin-top: 0;
+}
+
+.travel-client-icons-wrapper{
+    margin: 36px 0 17px;
+box-shadow: 0 0 10px #f7f7fd;
+background: #fff;
+border-radius: 10px;
+overflow:hidden;
+box-shadow: 0px 0px 10px #E6E4FA4D;
+    ul {display: flex;justify-content: space-between;
+        li {
+            a {
+                color: #000000;
+                font-size:18px;
+                line-height: 24px;
+                font-weight: 500;
+                display: block;
+                padding:17px 35px 15px;
+                min-width: 178px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg{margin-right:12px;vertical-align: middle;}
+                &:hover,
+                &.active {
+                    color: #fff;
+                    background: #3EB2FF;
+                  
+                }
+              
+            }
+             #files{
+                &:hover,  &.active {                  
+                    svg path {
+                        fill: #fff !important;
+                        stroke:#fff !important; 
+                    }
+                }
+            }
+            #bookingLink ,#bookingLink1 { 
+                &:hover,  &.active {
+                    background:#C52B96;
+                    svg path {
+                        fill: #fff !important;
+                        stroke:#fff !important;
+                    }
+                }
+            }
+            #guestlist , #itinerary{
+                &:hover,  &.active {
+                    background:#FFEF0C;
+                    color:#000;
+                    svg path {
+                        stroke:#000 !important;
+                    }
+                }
+            }
+            #clientDetailLink{
+                &:hover,  &.active {
+                    svg path {
+                        stroke:#fff !important;
+                    }
+                }
+            }
+            #money {
+                &:hover,  &.active {
+                    background:#FF6E6B;
+                    svg path {
+                        stroke:#fff !important;
+                    }
+                }
+            }
+          
+            @include display-inline(middle);
+            @include text-align(center);
+            margin-right: 50px;
+            color: $clr-white;
+            text-transform: capitalize;
+&:last-child{margin-right:0;}
+          
+        }
+    }
+}
+.border-view ul {
+    padding: 0 20px;
+    border-top: 0;
+}
+.travel-client-search-result .options-prices .table th{font-size: 13px !important;font-weight: 500;}
+.moneydue , .supplier-view , .payment-view , .booking-option , .client-booking-view , .client-note-view , .travel-client-money{
+    .heading-content {
+        margin-bottom: 0;
+        padding-bottom: 0 !important;
+        border-bottom: 0;
+    }
+    .table{margin-top:10px;}
+}
+// .supplier-view , .payment-view{
+//     .table-wrap{max-height: 293px;overflow: auto;}
+// }
+.booking-option{ 
+    .table-wrap{
+        .table{
+            tr{
+                td{
+                    &:nth-child(2){
+                        input[type="number"]{
+                            width:55px;
+                            border-radius: 5px;
+                            border:1px solid #EFEFEF;
+                        }
+                    }
+                    &:nth-child(3){
+                        input[type="number"]{
+                            width:55px;
+                            border-radius: 5px;
+                            border:1px solid #EFEFEF;
+                        }
+                    }
+                    &:nth-child(4){
+                        input[type="text"]{
+                            width:106px;
+                            border-radius: 5px;
+                            border:1px solid #EFEFEF;
+                        }
+                    }
+                    &:nth-child(5){display:flex;
+                        input[type="number"]{
+                            width:72px;
+                            border-radius: 5px 0  0 5px;
+                            border:1px solid #EFEFEF;
+                        }
+                        select{
+                            background:#F6F5FD  url("../images/icons/select-arrow.svg") no-repeat 90% center;
+                            background-size: 8px;
+                            border-radius: 0 5px 5px 0;
+                            font-size: 12px;
+                            color:#474747;
+                            width: auto;
+                            padding-right: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.file-upload-section {margin-bottom:80px;}
+#refundpartial{margin-top:40px;}
+.travel-client-money {
+    .left-border{border-color:#FF6E6B;}
+    .money::after{display: none;}
+    .refunds ul li {
+        input[type="text"]{max-width: 100%;min-height: 42px;}
+        select{max-width: 100%;min-height: 42px;}
+    }
+    .refund-paid{margin-top:40px;margin-bottom:80px;
+        p{color:#555555;text-align: center;font-size: 14px;font-weight: 500;}
+        }
+        .refund-content.heading-content{margin-bottom:15px;padding-bottom:15px !important;        
+            border-bottom:1px solid #EFEFEF;
+        }
+}
+.header .nav > ul > li ul li{padding:10px;margin-top:0 !important;border-radius:5px;cursor: pointer;}
+.header .nav > ul > li > a{font-weight: 500;}
+// .header .nav > ul > li:first-child ul li{
+//     &:hover{background:#deecf4;}
+// }
+// .header .nav > ul > li:nth-child(2) ul li{
+//     &:hover{background:#d8d5e6;} 
+// }
+// .header .nav > ul > li:nth-child(3) ul li{
+//     &:hover{background:#e7d5ec;}
+// }
+// .header .nav > ul > li:nth-child(4) ul li{
+//     &:hover{background:#eadae1;}
+// }
+// .header .nav > ul > li:nth-child(5) ul li{
+//     &:hover{background:#e6d4bb;}
+// }
+.container-fluid {
+    padding: 0 30px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+body{
+    -webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering: optimizeLegibility;
+}
+.fa-eye-slash:before {
+    content: " ";
+    background: url('../images/icons/eye-off.svg') no-repeat center bottom;
+    width:16px;
+    height:19px;
+    display:block;
+}
+.fa-eye:before{
+    content: " "; 
+    background: url('../images/icons/eye-open.svg') no-repeat center bottom;
+    width:16px;
+    height:17px;
+    display:block;
+}
+// .header .nav > ul > li > a.active{
+//     &:after{display: block;}
+//     &:before{display: block;}
+// }
+.search-client{
+    .form-flex-wrapper{
+        .new-btn{
+            padding:13px 30px;
+            &:hover{
+                background: #37A4EC;
+            }
+        }
+    }
+}
+
+
+
+.controls-view{
+    .flex-three-form{
+        li:nth-child(3n){
+            flex:0 0 20.5%;
+        }
+    }
+}
+.flex-three-form li .switch {
+    margin-right: 33%;
+}

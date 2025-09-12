@@ -1,4 +1,13 @@
+wwwroot\css\_common.scss
+wwwroot\css\_fonts.scss
+wwwroot\css\_login.scss
+wwwroot\css\Body.css
+wwwroot\css\Login-Register-Forget-Pass.css
 wwwroot\css\site.css
+wwwroot\css\style.css
+wwwroot\css\style.css.map
+wwwroot\css\style.scss
+wwwroot\css\variables.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
