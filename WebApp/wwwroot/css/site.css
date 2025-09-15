@@ -18,8 +18,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: #1C1531;
+    color: white;
 }
+
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
@@ -35,4 +38,15 @@ body {
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: var(--bs-secondary-color);
+}
+
+.navbar-brand {
+    background-color: #1C1531 !important; /* cream background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+    color: white;
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
 }

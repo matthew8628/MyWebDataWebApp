@@ -1,5 +1,6 @@
 /* _content/WebApp/Pages/CreateUser.cshtml.rz.scp.css */
 body[b-serkdjqo26] {
+    background-color: springgreen;
 }
 
 form div[b-serkdjqo26] {
@@ -10,6 +11,14 @@ form input[b-serkdjqo26] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
+}
+.login-form[b-serkdjqo26] {
+    max-width: 10px;
+}
+
+h1[b-serkdjqo26]{
+    font-size: 32px;
+    font-family: 'syne', Inter, sans-serif;
 }
 /* _content/WebApp/Pages/DisplayData.cshtml.rz.scp.css */
 .user-box[b-6utyd6rw20] {

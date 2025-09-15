@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Models;
 using Services;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace WebApp.Pages
 {
@@ -36,9 +37,9 @@ namespace WebApp.Pages
 
         }
 
-        public void OnGet()
+        public async Task OnGetAsync()
         {
-
+            NewUser.Id = await _httpClient.GetFromJsonAsync<int>("https://localhost:7050/UserAPI/NextId");
         }
     }
 }

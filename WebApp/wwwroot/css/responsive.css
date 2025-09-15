@@ -1,0 +1,165 @@
+/*---------------------------- PTS Color Variable -----------------------------------*/
+/*font size an font weight mixins*/
+/*clear fix mixins*/
+/*Box sizeing mixins*/
+/*Center Block mixins*/
+/*Float mixins*/
+/*Display inline block mixins*/
+/*Text align block mixins*/
+/* Positional mixins */
+/* Calculate-width function */
+/*mixin for transition animation*/
+/*mixin for grid system*/
+/* mixin for small select + input + label */
+/* mixin for table-alignment */
+/* vertical center for all child */
+/* span width display type and width */
+/* start calender with updated UI */
+/* End calender with updated UI */
+/* start custom file upload */
+/* form inline block */
+/* labe inline width checkbox */
+@media screen and (max-width: 1139px) {
+  /* line 4, ../sass/responsive.scss */
+  .container {
+    width: 100%;
+    padding: 0 15px 50px 15px;
+  }
+
+  /* line 8, ../sass/responsive.scss */
+  .header .nav > ul > li {
+    width: 20%;
+  }
+  /* line 10, ../sass/responsive.scss */
+  .header .nav > ul > li > a {
+    width: 100%;
+  }
+
+  /* start member update user */
+  /* line 174, ../sass/_pts-mixins.scss */
+  .member-update-user label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* line 178, ../sass/_pts-mixins.scss */
+  .member-update-user select {
+    width: 100%;
+  }
+  /* line 181, ../sass/_pts-mixins.scss */
+  .member-update-user input[type="text"] {
+    width: 100%;
+  }
+  /* line 17, ../sass/responsive.scss */
+  .member-update-user .user-privileges label {
+    width: 180px;
+  }
+
+  /* End member update user */
+}
+@media screen and (max-width: 1023px) {
+  /* line 24, ../sass/responsive.scss */
+  .desktop-hide {
+    display: block;
+  }
+
+  /* line 27, ../sass/responsive.scss */
+  .mobile-hide {
+    display: none;
+  }
+
+  /*start navigation*/
+  /* line 32, ../sass/responsive.scss */
+  .header .nav {
+    display: none;
+    margin-top: 0;
+  }
+  /* line 36, ../sass/responsive.scss */
+  .header .nav > ul > li {
+    float: none;
+    width: 100%;
+  }
+  /* line 39, ../sass/responsive.scss */
+  .header .nav > ul > li > a {
+    text-align: left;
+    height: auto;
+    line-height: inherit;
+    padding: 10px;
+  }
+  /* line 45, ../sass/responsive.scss */
+  .header .nav > ul > li ul {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding: 10px 0;
+  }
+  /* line 50, ../sass/responsive.scss */
+  .header .nav > ul > li ul li {
+    float: none;
+    width: 100%;
+  }
+  /* line 53, ../sass/responsive.scss */
+  .header .nav > ul > li ul li h2 {
+    margin-bottom: 5px;
+  }
+  /* line 56, ../sass/responsive.scss */
+  .header .nav > ul > li ul li:nth-child(n+3) {
+    margin-top: 10px;
+  }
+  /* line 59, ../sass/responsive.scss */
+  .header .nav > ul > li ul li + li {
+    margin-top: 10px;
+  }
+  /* line 65, ../sass/responsive.scss */
+  .header .nav > ul > li:hover ul {
+    display: none;
+  }
+  /* line 72, ../sass/responsive.scss */
+  .header .user-detail .fa-bars {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+
+  /*end navigation*/
+}
+@media screen and (max-width: 767px) {
+  /* line 81, ../sass/responsive.scss */
+  .mmb-12 {
+    margin-bottom: 10px;
+  }
+
+  /* line 84, ../sass/responsive.scss */
+  .member-update-user i {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+  }
+
+  /* line 93, ../sass/responsive.scss */
+  .popup-outer-container .popup-inner-container .text-table td {
+    display: block;
+    padding: 4px;
+  }
+
+  /* line 100, ../sass/responsive.scss */
+  .red-text {
+    margin-left: 0;
+  }
+
+  /* line 106, ../sass/responsive.scss */
+  .two-col-container > div {
+    display: block;
+    padding: 10px 0;
+  }
+  /* line 111, ../sass/responsive.scss */
+  .two-col-container .main-content {
+    padding-left: 0;
+  }
+  /* line 115, ../sass/responsive.scss */
+  .two-col-container .right-sidebar {
+    text-align: left;
+  }
+}

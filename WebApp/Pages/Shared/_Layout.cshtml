@@ -21,20 +21,37 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/DisplayData">Data Display</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/DisplayData">Data Display</a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CreateUser">Create User</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/CreateUser">Create User</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+
+    <div class="login-wrap row m-4">
+        <!-- Left image column -->
+        <div class="left-area col-md-6 login_image">
+            <img src="9-16hero.png" alt="Logo" class="img-fluid" />
+        </div>
+
+        <!-- Right form column -->
+        <div class="right-area col-md-6">
+            @RenderBody()
+        </div>
+    </div>
+
+
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -48,3 +65,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+

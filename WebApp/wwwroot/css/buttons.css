@@ -1,0 +1,39 @@
+﻿.pts-border-btn {
+    background: transparent;
+    position: relative;
+    border-width: 1px;
+    border-radius:20px;
+    border-style: solid;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 4px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+.pts-btn {
+    background: transparent;
+    position: relative;
+    border-width: 1px;
+    border-radius:20px;
+    border-color: transparent;
+    border-style: solid;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 4px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+.pts-btn svg, .pts-border-btn svg, .pts-btn svg path, .pts-border-btn svg path {
+    transition: fill 0.3s linear;
+}
+
+.pts-btn img:first-child, .pts-border-btn img:first-child, .pts-btn svg:first-child, .pts-border-btn svg:first-child {
+    margin-right: 10px;
+}
+.pts-btn img:last-child, .pts-border-btn img:last-child, .pts-btn svg:last-child, .pts-border-btn svg:last-child {
+    margin-left: 10px;
+}

@@ -26,5 +26,25 @@
     ],
     "ReturnTypes": [],
     "EndpointName": "CreateUser"
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UserAPIcontroller",
+    "Method": "GetNextId",
+    "RelativePath": "UserAPI/NextId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

@@ -17,5 +17,7 @@ namespace Services
         Task<User> UpdateUserAsync(User user);
 
         Task DeleteUserAsync(int id);
+
+        Task<int> GetNextIdAsync();
     }
 }

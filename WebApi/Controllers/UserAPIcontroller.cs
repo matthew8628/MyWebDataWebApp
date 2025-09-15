@@ -33,4 +33,11 @@ public class UserAPIcontroller : ControllerBase
         await _userService.CreateUser(NewUser);
         return RedirectToPage("/DisplayData");
     }
+
+    [HttpGet("NextId")]
+    public async Task<int> GetNextId()
+    {
+        var maxId = await _userService.GetNextIdAsync();
+        return maxId;
+    }
 }

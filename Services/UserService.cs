@@ -55,6 +55,15 @@ public class UserService : IUserService
         await _userRepository.DeleteUserAsync(id);
 
     }
+
+    public async Task<int> GetNextIdAsync()
+    {
+        var usersFromDb = await _userRepository.GetUsersAsync();
+
+        var maxId = usersFromDb.Any() ? usersFromDb.Max(u => u.Id) : 0;
+
+        return maxId + 1;
+    }
 }
 
 

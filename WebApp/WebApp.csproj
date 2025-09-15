@@ -11,14 +11,6 @@
     <Content Remove="Pages\Users\**" />
     <EmbeddedResource Remove="Pages\Users\**" />
     <None Remove="Pages\Users\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="compilerconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="compilerconfig.json" />
   </ItemGroup>	
 	
 	<ItemGroup>

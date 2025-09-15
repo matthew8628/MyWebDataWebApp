@@ -5,6 +5,37 @@
     }
 }
 
+@media (min-width: 768px) {
+    .left-area, .right-area {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+.login-wrap {
+    display: flex;
+    flex-wrap: wrap; /* allow stacking on small screens */
+    align-items: flex-start;
+    min-height: 100vh; /* optional, full viewport height */
+}
+
+.left-area {
+    flex: 1; /* take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right-area {
+    flex: 1 1 auto; /* take at least needed space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
 .login-wrap .site-logo img {
     max-height: 50px;
 }
@@ -58,7 +89,7 @@
     margin-bottom: 0.5rem;
     font-size: 2rem;
     line-height: 2.5rem;
-    color: #FFF;
+    color: #318499;
     font-weight: 500;
     font-family: var(--PTS-headings-font-family);
 }
@@ -182,9 +213,22 @@
 #ResetPassword .form-control,
 #reset-code-form .form-control,
 #passwordResetForm .form-control {
-    background-color: var(--PTS-neutral-color) !important;
-    color: var(--PTS-purple-tint-400) !important;
+    background-color: #FFF8E7 !important;
+    color: #6F6789;
+
 }
+
+
+.form-control.valid {
+    border: 2px solid #28a745; /* green */
+}
+
+.form-control.invalid {
+    border: 2px solid #dc3545; /* red */
+}
+
+
+
 
 #formLogIn input:-webkit-autofill {
     transition: background-color 0s 600000s, color 0s 600000s !important;
@@ -255,3 +299,47 @@
     letter-spacing: 0.6px;
     display: block;*/
     }
+
+.createUserTable {
+    width: 100%;
+}
+
+.createUserTable td {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.createUserTable input {
+    width: 100%;
+}
+/* Ensure the login form is properly centred */
+.login-form {
+    display: block;
+    margin: 2rem auto; /* centre horizontally */
+    padding: 2rem;
+    background: #1C1531;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+    background: #1C1531
+}
+
+.left-area img{
+    width: 100%;
+    height: 900px;
+    border-radius: 50px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767.98px) {
+    .left-area img {
+        max-height: 150px; /* shrink it a lot */
+        width: 500px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+}

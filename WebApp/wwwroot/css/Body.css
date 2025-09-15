@@ -102,7 +102,7 @@ th {
     fill: var(--PTS-blue) !important;
 }
 .pts-bg-blue {
-    background-color: var(--PTS-blue) !important;
+    background-color: #3E62EF !important;
 }
 .pts-hover-border-blue:hover {
     border-color: var(--PTS-blue) !important;
